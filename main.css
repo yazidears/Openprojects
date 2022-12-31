@@ -66,7 +66,7 @@
     25% {
         background: white;
     color: black;
-      width: 12.75vh;
+      width: 14vh;
       opacity: 100%;
       font-size: 5.7vh;
       height: 1.2em;
@@ -127,3 +127,61 @@
         transform: rotate(0deg)
     }
   }
+  .text-container {
+    width: 100%; /* add this */
+  }
+  
+  .text {
+    position: relative;
+    display: inline-block;
+    font-family: SangBleuBlack, 'Times New Roman', Times, serif;
+    font-size: 10vw;
+  }
+  
+  .text .highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: yellow;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .text:hover .highlight {
+    width: 100%;
+  }
+  
+
+@font-face {
+    font-family: 'SangBleuBlack'; /* specifies the name of the font */
+    src: url('SangBleu-Black.otf') /* specifies the location of the font file */
+  }
+  @font-face {
+    font-family: 'SangBleu'; /* specifies the name of the font */
+    src: url('SangBleu.otf') /* specifies the location of the font file */
+  }
+  body {
+    background: linear-gradient(90deg, #ffb6b6, #fdffb6, #e4ffb6, #b6fffc, #b6beff, #e8b6ff, #ffb6d2);
+    background-size: 3200% 3200%;
+
+    -webkit-animation: AnimationName 3.5s ease infinite;
+    -moz-animation: AnimationName 3.5s ease infinite;
+    animation: AnimationName 3.5s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:35% 0%}
+    50%{background-position:66% 100%}
+    100%{background-position:35% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:35% 0%}
+    50%{background-position:66% 100%}
+    100%{background-position:35% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:35% 0%}
+    50%{background-position:66% 100%}
+    100%{background-position:35% 0%}
+}
